@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55c09f31-e6ea-4d3f-bc24-dbbae96fabe8" name="Default Changelist" comment="">
+    <list default="true" id="55c09f31-e6ea-4d3f-bc24-dbbae96fabe8" name="Default Changelist" comment="Feature: Created a controller for comments, added a function that posts comments and sends the comment posted by another user to the authenticated user through mail">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TicketsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TicketsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tickets/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tickets/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,14 +70,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="categories" value="5" />
+          <entry key="categories" value="6" />
           <entry key="env" value="2" />
           <entry key="example" value="2" />
           <entry key="gitignore" value="1" />
           <entry key="json" value="1" />
           <entry key="log" value="5" />
           <entry key="migrations" value="2" />
-          <entry key="php" value="32" />
+          <entry key="php" value="36" />
           <entry key="sql" value="1" />
           <entry key="sqlite" value="2" />
           <entry key="tickets" value="2" />
@@ -84,11 +87,11 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="4" />
-          <entry key="Blade" value="5" />
-          <entry key="Database Element" value="11" />
+          <entry key="Blade" value="6" />
+          <entry key="Database Element" value="12" />
           <entry key="JSON" value="1" />
           <entry key="Log" value="4" />
-          <entry key="PHP" value="27" />
+          <entry key="PHP" value="30" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="Scratch" value="1" />
         </counts>
@@ -97,23 +100,35 @@
         <counts>
           <entry key="env" value="190" />
           <entry key="log" value="1" />
-          <entry key="php" value="586" />
-          <entry key="txt" value="2080" />
+          <entry key="php" value="601" />
+          <entry key="txt" value="2297" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="190" />
-          <entry key="Blade" value="2" />
+          <entry key="Blade" value="4" />
           <entry key="Log" value="1" />
-          <entry key="PHP" value="584" />
-          <entry key="PLAIN_TEXT" value="2080" />
+          <entry key="PHP" value="597" />
+          <entry key="PLAIN_TEXT" value="2297" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TicketsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="64" column="79" lean-forward="true" selection-start-line="64" selection-start-column="79" selection-end-line="64" selection-end-column="79" />
+              <folding>
+                <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Comment.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -123,10 +138,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/tickets/show.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
+            <state relative-caret-position="255">
               <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
               <folding>
                 <element signature="e#23#63#0#PHP" expanded="true" />
@@ -136,21 +160,30 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Ticket.php">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="255">
+              <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_12_161510_create_comments_table.php">
+        <entry file="file://$PROJECT_DIR$/app/Ticket.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+            <state relative-caret-position="238">
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CommentsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="30" column="72" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
               <folding>
-                <element signature="e#7#45#0#PHP" expanded="true" />
+                <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -182,14 +215,15 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/config/mail.php" />
         <option value="$PROJECT_DIR$/resources/views/tickets/user_tickets.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_12_12_161510_create_comments_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_12_07_002334_create_tickets_table.php" />
+        <option value="$PROJECT_DIR$/app/Comment.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/app/Ticket.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/TicketsController.php" />
         <option value="$PROJECT_DIR$/resources/views/tickets/show.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_12_12_161510_create_comments_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_12_07_002334_create_tickets_table.php" />
-        <option value="$PROJECT_DIR$/app/Ticket.php" />
-        <option value="$PROJECT_DIR$/app/Comment.php" />
-        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/CommentsController.php" />
       </list>
     </option>
   </component>
@@ -341,6 +375,13 @@
               <item name="Final-Project_Support-Ticket-App" type="b2602c69:ProjectViewProjectNode" />
               <item name="Final-Project_Support-Ticket-App" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Final-Project_Support-Ticket-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final-Project_Support-Ticket-App" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Mailers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -459,7 +500,7 @@
       <workItem from="1544218921715" duration="6928000" />
       <workItem from="1544304407027" duration="27819000" />
       <workItem from="1544570577730" duration="7294000" />
-      <workItem from="1544592037142" duration="6975000" />
+      <workItem from="1544592037142" duration="8924000" />
     </task>
     <task id="LOCAL-00001" summary="Task: Added laravel files and created/authenticated database">
       <created>1544144007999</created>
@@ -580,11 +621,25 @@
       <option name="project" value="LOCAL" />
       <updated>1544646638543</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Feature: Added user to ticket relationship such that a user can have many tickets and a ticket can belong to a user">
+      <created>1544646757273</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1544646757273</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Feature: Created a controller for comments, added a function that posts comments and sends the comment posted by another user to the authenticated user through mail">
+      <created>1544647328898</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1544647328898</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64402000" />
+    <option name="totallyTimeSpent" value="66351000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -603,7 +658,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3295082" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.4819672" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.28032786" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -660,7 +715,9 @@
     <MESSAGE value="Feature: Created a model for giving comments on tickets and added more columns to it's migration table" />
     <MESSAGE value="Feature: Added ticket to comment relationship such that a ticket can have many comments and a comment can belong to a ticket" />
     <MESSAGE value="Feature: Added user to comment relationship such that a user can have many comments and a comment can belong to a user" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: Added user to comment relationship such that a user can have many comments and a comment can belong to a user" />
+    <MESSAGE value="Feature: Added user to ticket relationship such that a user can have many tickets and a ticket can belong to a user" />
+    <MESSAGE value="Feature: Created a controller for comments, added a function that posts comments and sends the comment posted by another user to the authenticated user through mail" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: Created a controller for comments, added a function that posts comments and sends the comment posted by another user to the authenticated user through mail" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/composer.json">
@@ -739,13 +796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://46cce513-81a4-4fb8-bb07-afd02a3839de/schema/main/table/categories">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1479">
@@ -759,30 +809,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2018-12-11.log" />
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TicketsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/tickets/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/tickets/user_tickets.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
@@ -831,16 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_12_161510_create_comments_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-          <folding>
-            <element signature="e#7#45#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
@@ -858,13 +874,6 @@
     <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2018-12-12.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Ticket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Comment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -872,12 +881,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://46cce513-81a4-4fb8-bb07-afd02a3839de/schema/main/table/categories">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_12_161510_create_comments_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+          <folding>
+            <element signature="e#7#45#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TicketsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="64" column="79" lean-forward="true" selection-start-line="64" selection-start-column="79" selection-end-line="64" selection-end-column="79" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
+        <state relative-caret-position="255">
           <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
           <folding>
             <element signature="e#23#63#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Ticket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tickets/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CommentsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="30" column="72" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
