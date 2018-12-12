@@ -12,206 +12,244 @@
     <collation id="4" parent="1" name="NOCASE"/>
     <collation id="5" parent="1" name="RTRIM"/>
     <table id="6" parent="2" name="categories"/>
-    <table id="7" parent="2" name="migrations"/>
-    <table id="8" parent="2" name="password_resets"/>
-    <table id="9" parent="2" name="sqlite_master">
+    <table id="7" parent="2" name="comments"/>
+    <table id="8" parent="2" name="migrations"/>
+    <table id="9" parent="2" name="password_resets"/>
+    <table id="10" parent="2" name="sqlite_master">
       <System>1</System>
     </table>
-    <table id="10" parent="2" name="sqlite_sequence">
+    <table id="11" parent="2" name="sqlite_sequence">
       <System>1</System>
     </table>
-    <table id="11" parent="2" name="tickets"/>
-    <table id="12" parent="2" name="users"/>
-    <column id="13" parent="6" name="id">
+    <table id="12" parent="2" name="tickets"/>
+    <table id="13" parent="2" name="users"/>
+    <column id="14" parent="6" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="14" parent="6" name="name">
+    <column id="15" parent="6" name="name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="15" parent="6" name="created_at">
+    <column id="16" parent="6" name="created_at">
       <Position>3</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <column id="16" parent="6" name="updated_at">
+    <column id="17" parent="6" name="updated_at">
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <key id="17" parent="6">
+    <key id="18" parent="6">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="18" parent="7" name="id">
+    <column id="19" parent="7" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="19" parent="7" name="migration">
+    <column id="20" parent="7" name="ticket_id">
       <Position>2</Position>
-      <DataType>varchar|0s</DataType>
+      <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="20" parent="7" name="batch">
+    <column id="21" parent="7" name="user_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="21" parent="7">
+    <column id="22" parent="7" name="comment">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="7" name="created_at">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <column id="24" parent="7" name="updated_at">
+      <Position>6</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <key id="25" parent="7">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="22" parent="8" name="email">
+    <column id="26" parent="8" name="id">
       <Position>1</Position>
-      <DataType>varchar|0s</DataType>
+      <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="23" parent="8" name="token">
+    <column id="27" parent="8" name="migration">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="24" parent="8" name="created_at">
+    <column id="28" parent="8" name="batch">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="29" parent="8">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="30" parent="9" name="email">
+      <Position>1</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="9" name="token">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="9" name="created_at">
       <Position>3</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <index id="25" parent="8" name="password_resets_email_index">
+    <index id="33" parent="9" name="password_resets_email_index">
       <ColNames>email</ColNames>
       <ColumnCollations></ColumnCollations>
     </index>
-    <column id="26" parent="9" name="type">
+    <index id="34" parent="9" name="password_resets_token_index">
+      <ColNames>token</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <column id="35" parent="10" name="type">
       <Position>1</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="27" parent="9" name="name">
+    <column id="36" parent="10" name="name">
       <Position>2</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="28" parent="9" name="tbl_name">
+    <column id="37" parent="10" name="tbl_name">
       <Position>3</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="29" parent="9" name="rootpage">
+    <column id="38" parent="10" name="rootpage">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="30" parent="9" name="sql">
+    <column id="39" parent="10" name="sql">
       <Position>5</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="31" parent="10" name="name">
+    <column id="40" parent="11" name="name">
       <Position>1</Position>
     </column>
-    <column id="32" parent="10" name="seq">
+    <column id="41" parent="11" name="seq">
       <Position>2</Position>
     </column>
-    <column id="33" parent="11" name="id">
+    <column id="42" parent="12" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="34" parent="11" name="user_id">
+    <column id="43" parent="12" name="user_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="35" parent="11" name="category_id">
+    <column id="44" parent="12" name="category_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="36" parent="11" name="ticket_id">
+    <column id="45" parent="12" name="ticket_id">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="37" parent="11" name="title">
+    <column id="46" parent="12" name="title">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="38" parent="11" name="priority">
+    <column id="47" parent="12" name="priority">
       <Position>6</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="39" parent="11" name="message">
+    <column id="48" parent="12" name="message">
       <Position>7</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="40" parent="11" name="status">
+    <column id="49" parent="12" name="status">
       <Position>8</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="41" parent="11" name="created_at">
+    <column id="50" parent="12" name="created_at">
       <Position>9</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <column id="42" parent="11" name="updated_at">
+    <column id="51" parent="12" name="updated_at">
       <Position>10</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <index id="43" parent="11" name="tickets_ticket_id_unique">
+    <index id="52" parent="12" name="tickets_ticket_id_unique">
       <ColNames>ticket_id</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="44" parent="11">
+    <key id="53" parent="12">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="45" parent="12" name="id">
+    <column id="54" parent="13" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="46" parent="12" name="name">
+    <column id="55" parent="13" name="name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="47" parent="12" name="email">
+    <column id="56" parent="13" name="email">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="48" parent="12" name="password">
+    <column id="57" parent="13" name="password">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="49" parent="12" name="is_admin">
+    <column id="58" parent="13" name="is_admin">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <column id="50" parent="12" name="remember_token">
+    <column id="59" parent="13" name="remember_token">
       <Position>6</Position>
       <DataType>varchar|0s</DataType>
     </column>
-    <column id="51" parent="12" name="created_at">
+    <column id="60" parent="13" name="created_at">
       <Position>7</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <column id="52" parent="12" name="updated_at">
+    <column id="61" parent="13" name="updated_at">
       <Position>8</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <index id="53" parent="12" name="users_email_unique">
+    <index id="62" parent="13" name="users_email_unique">
       <ColNames>email</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="54" parent="12">
+    <key id="63" parent="13">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
