@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55c09f31-e6ea-4d3f-bc24-dbbae96fabe8" name="Default Changelist" comment="Feature: Added a store function in TicketsController in-order to save the ticket">
-      <change afterPath="$PROJECT_DIR$/app/Mailers/AppMailer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/emails/ticket_info.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/46cce513-81a4-4fb8-bb07-afd02a3839de.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/46cce513-81a4-4fb8-bb07-afd02a3839de.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TicketsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TicketsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +97,7 @@
           <entry key="env" value="190" />
           <entry key="log" value="1" />
           <entry key="php" value="566" />
-          <entry key="txt" value="930" />
+          <entry key="txt" value="1160" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -112,7 +106,7 @@
           <entry key="Blade" value="1" />
           <entry key="Log" value="1" />
           <entry key="PHP" value="565" />
-          <entry key="PLAIN_TEXT" value="930" />
+          <entry key="PLAIN_TEXT" value="1160" />
         </counts>
       </usages-collector>
     </session>
@@ -469,7 +463,7 @@
       <workItem from="1544160404038" duration="6434000" />
       <workItem from="1544218921715" duration="6928000" />
       <workItem from="1544304407027" duration="27819000" />
-      <workItem from="1544570577730" duration="1325000" />
+      <workItem from="1544570577730" duration="1739000" />
     </task>
     <task id="LOCAL-00001" summary="Task: Added laravel files and created/authenticated database">
       <created>1544144007999</created>
@@ -520,11 +514,25 @@
       <option name="project" value="LOCAL" />
       <updated>1544216643521</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Feature: Created an AppMailer app to send ticket info to the user">
+      <created>1544573950784</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1544573950784</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Task: Created a blade holding mail contents on sending an email response to the user on ticket info">
+      <created>1544574170340</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1544574170340</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51458000" />
+    <option name="totallyTimeSpent" value="51872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -590,7 +598,9 @@
     <MESSAGE value="Task: Added routes to get and post new tickets using create and store functions" />
     <MESSAGE value="Feature: Created and added content to a create blade for ticket creation and flash blade for displaying flashing session status" />
     <MESSAGE value="Feature: Added a store function in TicketsController in-order to save the ticket" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: Added a store function in TicketsController in-order to save the ticket" />
+    <MESSAGE value="Feature: Created an AppMailer app to send ticket info to the user" />
+    <MESSAGE value="Task: Created a blade holding mail contents on sending an email response to the user on ticket info" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task: Created a blade holding mail contents on sending an email response to the user on ticket info" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/composer.json">
