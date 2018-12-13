@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55c09f31-e6ea-4d3f-bc24-dbbae96fabe8" name="Default Changelist" comment="Feature">
-      <change afterPath="$PROJECT_DIR$/resources/views/emails/ticket_status.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/tickets/index.blade.php" afterDir="false" />
+    <list default="true" id="55c09f31-e6ea-4d3f-bc24-dbbae96fabe8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TicketsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TicketsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Mailers/AppMailer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mailers/AppMailer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +75,7 @@
           <entry key="json" value="1" />
           <entry key="log" value="6" />
           <entry key="migrations" value="2" />
-          <entry key="php" value="47" />
+          <entry key="php" value="48" />
           <entry key="sql" value="1" />
           <entry key="sqlite" value="2" />
           <entry key="tickets" value="2" />
@@ -87,7 +85,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="4" />
-          <entry key="Blade" value="10" />
+          <entry key="Blade" value="11" />
           <entry key="Database Element" value="12" />
           <entry key="JSON" value="1" />
           <entry key="Log" value="5" />
@@ -100,8 +98,8 @@
         <counts>
           <entry key="env" value="190" />
           <entry key="log" value="1" />
-          <entry key="php" value="618" />
-          <entry key="txt" value="2915" />
+          <entry key="php" value="620" />
+          <entry key="txt" value="3454" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -109,8 +107,8 @@
           <entry key=".env file" value="190" />
           <entry key="Blade" value="7" />
           <entry key="Log" value="1" />
-          <entry key="PHP" value="611" />
-          <entry key="PLAIN_TEXT" value="2915" />
+          <entry key="PHP" value="613" />
+          <entry key="PLAIN_TEXT" value="3454" />
         </counts>
       </usages-collector>
     </session>
@@ -120,8 +118,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TicketsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+            <state relative-caret-position="139">
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -130,6 +128,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/tickets/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
@@ -160,7 +167,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Mailers/AppMailer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
+            <state relative-caret-position="241">
               <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
               <folding>
                 <element signature="e#30#45#0#PHP" expanded="true" />
@@ -210,9 +217,10 @@
         <option value="$PROJECT_DIR$/app/Http/Middleware/AdminMiddleware.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/tickets/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/TicketsController.php" />
         <option value="$PROJECT_DIR$/app/Mailers/AppMailer.php" />
         <option value="$PROJECT_DIR$/resources/views/emails/ticket_status.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/TicketsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
       </list>
     </option>
   </component>
@@ -497,7 +505,7 @@
       <workItem from="1544218921715" duration="6928000" />
       <workItem from="1544304407027" duration="27819000" />
       <workItem from="1544570577730" duration="7294000" />
-      <workItem from="1544592037142" duration="14360000" />
+      <workItem from="1544592037142" duration="15414000" />
     </task>
     <task id="LOCAL-00001" summary="Task: Added laravel files and created/authenticated database">
       <created>1544144007999</created>
@@ -653,16 +661,38 @@
       <option name="project" value="LOCAL" />
       <updated>1544656138122</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Feature: Added an index function that gets all the tickets that have been created and a close function to TicketsController which on closure of tickets sends notification to the user through mailer">
+      <created>1544659507036</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1544659507036</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Task: Created an index page to show all the tickets and the ones closed by the admin">
+      <created>1544659849679</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1544659849679</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Feature: Added a function to send the ticket status to the user in AppMailer and created a page that holds the mail content on the ticket status">
+      <created>1544670366511</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1544670366511</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71787000" />
+    <option name="totallyTimeSpent" value="72841000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17549168" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17549168" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -675,7 +705,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3295082" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3590164" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3590164" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -737,7 +767,10 @@
     <MESSAGE value="Task and Fix: Enabled comments to be shown on the user's tickets as and when posted, created route for posting comments and fixed display message on CommentsController" />
     <MESSAGE value="Feature and Task: Added a function to send the posted ticket comments through mail notification to the user and created a blade containing the mail contents for the same" />
     <MESSAGE value="Feature: Created an admin middleware in-order to bring in closure of tickets, added admin access in the kernel and a few routes specifically for the admin accessible pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: Created an admin middleware in-order to bring in closure of tickets, added admin access in the kernel and a few routes specifically for the admin accessible pages" />
+    <MESSAGE value="Feature: Added an index function that gets all the tickets that have been created and a close function to TicketsController which on closure of tickets sends notification to the user through mailer" />
+    <MESSAGE value="Task: Created an index page to show all the tickets and the ones closed by the admin" />
+    <MESSAGE value="Feature: Added a function to send the ticket status to the user in AppMailer and created a page that holds the mail content on the ticket status" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: Added a function to send the ticket status to the user in AppMailer and created a page that holds the mail content on the ticket status" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/composer.json">
@@ -942,16 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TicketsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2018-12-12.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider">
         <state relative-caret-position="-9678" />
@@ -988,16 +1011,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Mailers/AppMailer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-          <folding>
-            <element signature="e#30#45#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/emails/ticket_status.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1012,6 +1025,33 @@
           <folding>
             <element signature="e#846#871#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Mailers/AppMailer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding>
+            <element signature="e#30#45#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TicketsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
         </state>
       </provider>
     </entry>
