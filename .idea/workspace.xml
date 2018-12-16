@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55c09f31-e6ea-4d3f-bc24-dbbae96fabe8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/includes/head.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/includes/nav.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tests/Feature/MailTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/tickets/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tickets/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/tickets/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tickets/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/tickets/user_tickets.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tickets/user_tickets.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +102,7 @@
           <entry key="env" value="190" />
           <entry key="log" value="1" />
           <entry key="php" value="1374" />
-          <entry key="txt" value="3559" />
+          <entry key="txt" value="3649" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -117,7 +111,7 @@
           <entry key="Blade" value="684" />
           <entry key="Log" value="1" />
           <entry key="PHP" value="690" />
-          <entry key="PLAIN_TEXT" value="3559" />
+          <entry key="PLAIN_TEXT" value="3649" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -595,7 +589,7 @@
       <workItem from="1544218921715" duration="6928000" />
       <workItem from="1544304407027" duration="27819000" />
       <workItem from="1544570577730" duration="7294000" />
-      <workItem from="1544592037142" duration="41726000" />
+      <workItem from="1544592037142" duration="42097000" />
     </task>
     <task id="LOCAL-00001" summary="Task: Added laravel files and created/authenticated database">
       <created>1544144007999</created>
@@ -779,15 +773,21 @@
       <option name="project" value="LOCAL" />
       <updated>1544670689378</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Feature: Partitioned the app blade contents to head and nav blades and added a footer">
+      <created>1544927213842</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1544927213842</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99153000" />
+    <option name="totallyTimeSpent" value="99524000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22995462" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -842,7 +842,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Feature: Created a model for tickets, updated it's migration table and added functions into it's models" />
     <MESSAGE value="Feature: Created a model for categories, updated it's migration table and added functions into it's model." />
     <MESSAGE value="Feature: Created a controller for opening tickets through TicketsController, added functions into it and also added categories to database using tinker command" />
     <MESSAGE value="Task: Added routes to get and post new tickets using create and store functions" />
@@ -867,7 +866,8 @@
     <MESSAGE value="Task: Created an index page to show all the tickets and the ones closed by the admin" />
     <MESSAGE value="Feature: Added a function to send the ticket status to the user in AppMailer and created a page that holds the mail content on the ticket status" />
     <MESSAGE value="Feature: Added a construct function to provide middleware auth in TicketsController and modified home page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: Added a construct function to provide middleware auth in TicketsController and modified home page" />
+    <MESSAGE value="Feature: Partitioned the app blade contents to head and nav blades and added a footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: Partitioned the app blade contents to head and nav blades and added a footer" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/database/database.sqlite">
