@@ -17,10 +17,10 @@
                         <table class="table">
                             <thead>
                             <tr>
-                                <th>Category</th>
-                                <th>Title</th>
-                                <th>Status</th>
-                                <th>Last Updated</th>
+                                <th>Category      </th>
+                                <th>Title         </th>
+                                <th>Status        </th>
+                                <th>Last Updated  </th>
                             </tr>
                             </thead>
                             <tbody>
