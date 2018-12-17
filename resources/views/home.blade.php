@@ -14,7 +14,7 @@
 
                         @if (Auth::user()->is_admin)
                             <p>
-                                See all <a href="{{ url('admin/tickets') }}">tickets</a>
+                                See all <a href="{{ route('tickets.index') }}">tickets</a>
                             </p>
                         @else
                             <p>

@@ -51,13 +51,15 @@
                                         <a href="{{ url('tickets/' . $ticket->ticket_id) }}" class="btn btn-primary">Comment</a>
                                     </td>
                                     <td>
-                                        <form action="{{ url('admin/close_ticket/' . $ticket->ticket_id) }}" method="POST">
+                                        <form action="{{ url('close_ticket/' . $ticket->ticket_id) }}" method="POST">
                                             {!! csrf_field() !!}
-                                            <button type="submit" class="btn btn-danger">Close</button>
+                                            <input type="submit" class="btn btn-danger" value="Close">
+
                                         </form>
                                     </td>
                                 </tr>
                             @endforeach
+                            @include('includes.flash')
                             </tbody>
                         </table>
 

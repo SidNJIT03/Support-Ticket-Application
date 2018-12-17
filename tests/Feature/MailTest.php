@@ -23,4 +23,5 @@ class MailTest extends TestCase
         Mail::to($user->email)->send(new Mailable());
         Mail::assertSent(Mailable::class);
     }
+
 }

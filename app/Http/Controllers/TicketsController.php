@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Notifications\NewTicket;
+use App\User;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Ticket;
@@ -31,6 +33,12 @@ class TicketsController extends Controller
             'message'   => 'required'
         ]);
 
+        $myUser = new User([
+            'user_id'   => Auth::user()->id,
+            'email'    => Auth::user()->email,
+            'name'  => Auth::user()->name,
+        ]);
+
         $ticket = new Ticket([
             'title'     => $request->input('title'),
             'user_id'   => Auth::user()->id,
@@ -39,13 +47,14 @@ class TicketsController extends Controller
             'priority'  => $request->input('priority'),
             'message'   => $request->input('message'),
             'status'    => "Open",
-
         ]);
-        //dd($ticket);
-
-
+        //dd($myUser);
+       // $email= Auth::user();
         $ticket->save();
 
+        //$myUser = User::find($email);
+        //dd($ticket);
+        $myUser->notify(new NewTicket());
         $mailer->sendTicketInformation(Auth::user(), $ticket);
 
         return redirect()->back()->with("status", "A ticket with ID: #$ticket->ticket_id has been opened.");
@@ -61,13 +70,13 @@ class TicketsController extends Controller
 
     public function show($ticket_id)
     {
-        $ticket = Ticket::where('ticket_id', $ticket_id)->firstOrFail();
+        $tickets = Ticket::where('ticket_id', $ticket_id)->firstOrFail();
 
-        $comments = $ticket->comments;
+        $comments = $tickets->comments;
 
-        $category = $ticket->category;
+        $category = $tickets->category;
 
-        return view('tickets.show', compact('ticket', 'category', 'comments'));
+        return view('tickets.show', compact('tickets', 'category', 'comments'));
     }
 
     public function index()
@@ -89,8 +98,7 @@ class TicketsController extends Controller
         $ticketOwner = $ticket->user;
 
         $mailer->sendTicketStatusNotification($ticketOwner, $ticket);
-
-        return redirect()->back()->with("status", "The ticket has been closed.");
+        return redirect()->route('tickets.index',['ticket_id' => $ticket_id])->with('status', 'The ticket #'.$ticket_id.' has been closed.');
     }
 
 }
