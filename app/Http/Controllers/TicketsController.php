@@ -54,7 +54,7 @@ class TicketsController extends Controller
 
         //$myUser = User::find($email);
         //dd($ticket);
-        $myUser->notify(new NewTicket());
+        //$myUser->notify(new NewTicket());
         $mailer->sendTicketInformation(Auth::user(), $ticket);
 
         return redirect()->back()->with("status", "A ticket with ID: #$ticket->ticket_id has been opened.");
