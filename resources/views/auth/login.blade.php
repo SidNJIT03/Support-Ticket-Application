@@ -11,7 +11,18 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="form-group row">
+                        <div class="form-group ">
+                            <label for="login_as" class="col-sm-2 label-control" style="margin-left: 50%">{{ __('Login As') }}</label>
+
+                            <div class="col-sm-6 ">
+                                <select id="login_as" type="category" class="form-control" name="login_as" style="margin-left: 70%">
+                                    <option value="">Select</option>
+                                    <option value="1">Admin</option>
+                                    <option value="0">Non-Admin</option>
+                                </select>
+                        </div>
+
+                        <div class="form-group row py-5">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
