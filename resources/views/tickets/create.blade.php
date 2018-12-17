@@ -37,6 +37,10 @@
                                         <option value="">Select Category</option>
                                         <option value="1">Technical</option>
                                         <option value="2">Non-Technical</option>
+                                        <option value="high">High</option>
+                                        @foreach ($categories as $category)
+                                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                        @endforeach
                                     </select>
 
                                     @if ($errors->has('category'))
